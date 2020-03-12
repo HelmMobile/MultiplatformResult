@@ -1,18 +1,18 @@
-#Multiplatform Result
+# Multiplatform Result
 
 This library provides a way to model functions that can either Success or Fail, it introduces a new type Result<Value,Throwable>
 
 
-##Motivation
+## Motivation
 
 The motivation behind this library is to bring a common pattern in FP to OOP in a more accessible way.
 
 Result is designed to be used when you have to model functions that can fail, it encourages you to deal with your failure cases in a way that the user can understand it.
 
-##Instalattion
+## Instalattion
 
 
-##Usage
+## Usage
 Consider the following case, when you have to make an api call.
 ``` Kotlin
 fun getUser(): User? = 
@@ -63,7 +63,7 @@ val result = Result.of {
 }
 ```
 
-##Monad Comprehension(ish)
+## Monad Comprehension(ish)
 
 In this type of framework is usual to find the following problem:
 
@@ -81,7 +81,6 @@ fun readFile(){
 As you can see nesting problems can arise when you need all the previous parameters in the inner function. To solve that problem FP languages uses a technique called Monad comprehension in this library we have tried to reproduce this approach.
 
 ````kotlin
-result
 fun readFile() = Result.of {
    val file = readFile().value
    val line = file.readLine().value
@@ -93,7 +92,6 @@ fun readFile() = Result.of {
 Or in a more concise way:
 
 ````kotlin
-result
 fun readFile() = Result.of {
    val (file) = readFile()
    val (line) = file.readLine()
@@ -103,7 +101,7 @@ fun readFile() = Result.of {
 ````   
 
 
-##License
+## License
    Copyright 2020 Helm Mobile Development S.L.
 
    Licensed under the Apache License, Version 2.0 (the "License");
