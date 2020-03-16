@@ -10,7 +10,20 @@ The motivation behind this library is to bring a common pattern in FP to OOP in 
 Result is designed to be used when you have to model functions that can fail, it encourages you to deal with your failure cases in a way that the user can understand it.
 
 ## Instalattion
-
+```kotlin
+  repositories {
+        // ...
+        maven {  url 'https://dl.bintray.com/flaquir4/multiplatform-result' }
+  }
+```
+```kotlin
+commonMain {
+    dependencies {
+        // ...
+        implementation("cat.helm.result:multiplatform-result:1.0.0")
+    }
+}
+``` 
 
 ## Usage
 Consider the following case, when you have to make an api call.

@@ -45,8 +45,6 @@ sealed class Result<out Value, out Exception : Throwable> {
         when (this) {
             is Success -> this
             is Failure -> {
-                //  val logger = LoggerFactory.getLogger("Application")
-                //  logger.error(exception.message, exception)
                 Failure(mapFunction(exception))
             }
         }
