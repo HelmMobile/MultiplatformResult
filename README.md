@@ -13,7 +13,8 @@ Result is designed to be used when you have to model functions that can fail, it
 ```kotlin
   repositories {
         // ...
-        maven {  url 'https://dl.bintray.com/flaquir4/multiplatform-result' }
+        jcenter()
+
   }
 ```
 ```kotlin
